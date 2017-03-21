@@ -1,15 +1,14 @@
 fileFormatVersion: 2
-guid: 3c41096caaedcf740ab6253b192ba39c
-timeCreated: 1489614862
+guid: a2771043495492d40ba0d344469059f4
+timeCreated: 1489978034
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Samwal idle_0
-    21300002: Samwal idle_1
-    21300004: Samwal idle_2
-    21300006: Samwal idle_3
-    21300008: Samwal idle_4
-    21300010: Samwal idle_5
+    21300000: Samwal_Hit1_0
+    21300002: Samwal_Hit1_1
+    21300004: Samwal_Hit1_2
+    21300006: Samwal_Hit1_3
+    21300008: Samwal_Hit1_5
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -33,7 +32,7 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 1
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapMode: 1
@@ -108,80 +107,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Samwal idle_0
+      name: Samwal_Hit1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 31
-        height: 33
-      alignment: 9
-      pivot: {x: 0.40302032, y: 0.43167335}
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Samwal idle_1
+      name: Samwal_Hit1_1
       rect:
         serializedVersion: 2
-        x: 33
-        y: 0
-        width: 27
-        height: 33
-      alignment: 9
-      pivot: {x: 0.35617688, y: 0.4051019}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Samwal idle_2
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 0
-        width: 29
-        height: 33
-      alignment: 9
-      pivot: {x: 0.33153954, y: 0.40889782}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: Samwal idle_3
-      rect:
-        serializedVersion: 2
-        x: 91
+        x: 37
         y: 0
         width: 24
-        height: 33
-      alignment: 9
-      pivot: {x: 0.34863758, y: 0.40889782}
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Samwal idle_4
+      name: Samwal_Hit1_2
       rect:
         serializedVersion: 2
-        x: 117
+        x: 68
         y: 0
-        width: 28
-        height: 33
-      alignment: 9
-      pivot: {x: 0.41499874, y: 0.41648966}
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: Samwal idle_5
+      name: Samwal_Hit1_3
       rect:
         serializedVersion: 2
-        x: 148
+        x: 110
         y: 0
-        width: 29
-        height: 33
-      alignment: 9
-      pivot: {x: 0.46976393, y: 0.41648966}
+        width: 43
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Samwal_Hit1_5
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 0
+        width: 45
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

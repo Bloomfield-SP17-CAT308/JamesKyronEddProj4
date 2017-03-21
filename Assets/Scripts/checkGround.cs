@@ -12,17 +12,11 @@ public class checkGround : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other)
-    {
+   {
         if (other.CompareTag("Platform"))
             pp.isGrounded = true;    
     }
 
-    void OnTriggerStay2D(Collider other)
-    {
-        if (other.CompareTag("Platform"))
-        if (pp.isGrounded == false)
-            pp.isGrounded = true;
-            
-    }
+
        
 }

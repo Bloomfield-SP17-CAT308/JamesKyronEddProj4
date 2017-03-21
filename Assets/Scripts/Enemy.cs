@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
       //  else
         {
             rb.AddForce(new Vector2(xforce * moveSpeed, 0));
-            print(rb.velocity);
+        
         }
     }
 

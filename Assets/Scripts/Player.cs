@@ -5,39 +5,59 @@ using UnityEngine;
 public class Player : MonoBehaviour 
 {
 
-    public float health, moveSpeed, maxMSpeed, JumpPower;
+    public float health, moveSpeed, maxMSpeed, JumpPower, atk;
     public Vector2 vel;
     public Vector2 initPos;
-    public bool isAttacking, isGrounded;
-
-    private Animator anim;
+    public bool isGrounded, attacking;
+    public Collider2D attackTrigger, atkL, atkR;
+    public Animator anim;
     private Rigidbody2D rb;
 
     // Use this for initialization
     void Start () 
     {
-        health = 5f;
-        moveSpeed = 10f;
-        maxMSpeed = 12f;
-        JumpPower = 300;
+        
+        attacking = false;
         isGrounded = false;
         initPos = transform.position;
-     
-        isAttacking = false;
+        attackTrigger = atkL;
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
     }
 
-    // Update is called once per frame
-    void FixedUpdate () 
+    void Update()
     {
-      
         
+        if (GetComponent<SpriteRenderer>().flipX)
+            attackTrigger = atkL;
+        else
+            attackTrigger = atkR;
+
+        if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Punch"))
+            attacking = false;
+            
+         
+    }
+    void FixedUpdate ()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            attacking = true;
+            PunchThings();
+        }
+
+
+        
+
+
         if (!isGrounded)
             anim.SetBool("isJumping", true);
         else
             anim.SetBool("isJumping", false);
-        
+
+
         if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
             print("true");
@@ -45,9 +65,15 @@ public class Player : MonoBehaviour
         }
         float HForce = Input.GetAxis("Horizontal");
         if (HForce < 0)
+        {
             GetComponent<SpriteRenderer>().flipX = true;
-        if(HForce > 0)
+
+        }
+        if (HForce > 0)
             GetComponent<SpriteRenderer>().flipX = false;
+        
+
+        
         Move(HForce);
 
         if (rb.velocity.magnitude > maxMSpeed)
@@ -66,24 +92,22 @@ public class Player : MonoBehaviour
         }
 
         anim.SetFloat("Speed", Mathf.Abs(xforce));
-        anim.speed = Mathf.Abs(xforce);
+
     }
 
-    void Attack()
-    {
-        //Animation Code 
-    }
-
+  
     void Jump()
     {
-        
         rb.AddForce(new Vector2(0, JumpPower));
         isGrounded = false;
     }
 
-    void OnAttacking()
+    void PunchThings()
     {
         
+        anim.SetTrigger("Hit1");
+       
     }
+        
 
 }
